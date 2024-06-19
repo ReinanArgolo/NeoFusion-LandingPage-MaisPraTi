@@ -6,45 +6,123 @@
     <title>NeoFusion</title>
     <link rel="shortcut icon" href="/Img/favicon.jpg" type="image/jpg">
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/normalize.css">
 </head>
 <body>
-        <!-- CABEÇALHO -->
-    <header id="cabecalho">
-
-        <a href="index.html"><img src="/Img/Logo.svg" alt="Logo da empresa NeoFusion" width="282.4px" id="logo"></a>
+    <div id="#container">
+            
         
-        <!-- NAVEGAÇÂO -->
-        
-        <nav class="navegacao">
-            <ul>
-                <a href="#sobre"><li>Sobre</li></a>
-                <a href="#Contato"><li>Contato</li></a>
-                <a href="#page-trabalhe"><li>Trabalhe conosco</li></a>
-                <a href="#login"><li>Área do Cliente</li></a>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="sobre">
-            <div id="imagem01">
-                <img class="imagem01" src="/Img/img01.jpg" alt="Robô ssegurando uma luz">
+            <!-- CABEÇALHO -->
+        <header id="cabecalho">
+            <div>
+                <a href="index.html"><img src="/Img/Logo.svg" alt="Logo da empresa NeoFusion" width="282.4px" id="logo"></a>
             </div>
+            
+            
+            <!-- NAVEGAÇÂO -->
+            
+            <nav class="navegacao">
+                <ul>
+                    <a href="#servicos"><li>Sobre</li></a>
+                    <a href="#contato"><li>Contato</li></a>
+                    <a href=""><li>Trabalhe conosco</li></a>
+                    <a href="#login"><li>Área do Cliente</li></a>
+                </ul>
+            </nav>
+        </header>
 
-            <aside>
-                <div id="textoSobre">
-                    <h1>
-                        "Fundindo Ideias com Inovação"
-                    </h1>
-
-                    <p>
-                        NeoFusion é uma startup de tecnologia de ponta que transforma ideias visionárias em realidade. Focada em inovação disruptiva, NeoFusion combina inteligência artificial, big data e automação para criar soluções que redefinem o futuro dos negócios.
-                    </p>
-
-                    <button class="botao"><a href="#artigo">Saiba mais...</a></button>
+        <main>
+            <section id="sobre">
+                <div id="imagem01">
+                    <img class="imagem01" src="/Img/img01.jpg" alt="Robô ssegurando uma luz">
                 </div>
-            </aside>
-        </section>
-    </main>
+
+                <aside>
+                    <div id="textoSobre">
+                        <h1>
+                            "Fundindo Ideias com Inovação"
+                        </h1>
+
+                        <p>
+                            NeoFusion é uma startup de tecnologia de ponta que transforma ideias visionárias em realidade. Focada em inovação disruptiva, NeoFusion combina inteligência artificial, big data e automação para criar soluções que redefinem o futuro dos negócios.
+                        </p>
+
+                        <button class="botao"><a href="#artigo">Saiba mais...</a></button>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="servicos">
+                <hr>
+                <h1>Nossos Serviços</h1>
+                <h2>Clique para ver mais</h2>
+                <div  class="boxImage">
+                        <div class="imageItem">
+                            <a href="#"><img src="/Img/img02.jpg" height="300" width="300"></a>
+                            <h3 class="text1">Inteligência artifical personalizavel</h3>
+                        </div>
+
+                        <div class="imageItem">
+                            <a href="#"><img src="/Img/img03.jpg" height="300" width="300"></a>
+                            <h3 class="text2"> Big Data & Análise de Dados</h3>
+                        </div>
+
+                        <div class="imageItem">
+                            <a href="#"><img src="/Img/img04.jpg" height="300" width="300"></a>
+                            <h3 class="text3">Consultoria para sua Empresa</h3>
+                        </div>
+                </div>
+            </section>
+
+            <section id="contato">
+                <div class="titulo">
+                    <hr>
+                    <h1>Fale conosco</h1>
+                </div>
+
+                <div class="formulario">
+                    <form>
+                        <div>
+                            <label class="left">Nome</label> <br>
+                            <input type="text" id="name"> <br>
+                        </div>
+                        
+                        <div>
+                            <label>Email</label> <br>
+                            <input type="text" id="email"> <br>
+                        </div>
+
+                        <div>
+                            <label>Mensagem</label> <br>
+                            <input type="text"> <br>
+                        </div>
+
+                        <div class="enviar">
+                            <button id="enviarBtn">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <dialog id="enviado">
+                    <h1>Sua mensagem foi enviada</h1>
+                    <p>Entraremos em contato em breve. Agradecemos sua mensagem!</p>
+                </dialog>
+
+                <dialog id="erro">
+                    <h1>Atenção!</h1>
+                    <p>Preencha os campos corretamente</p>
+                    <button class="ok" id="ok">Ok</button>
+                </dialog>
+
+
+
+            </section>
+
+            <footer>
+                <h4>Reinan Argolo - Todos os direitos reservdos - 2024</h4>
+            </footer>
+        </main>
+
+        <script src="/script/script.js"></script>
+    </div>
 </body>
 </html>

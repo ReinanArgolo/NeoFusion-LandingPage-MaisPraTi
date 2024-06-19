@@ -1,14 +1,21 @@
 body {
     background: #EDF8FF;
-    margin: 0 0 0;
-    padding: 0px;
-    width: 1080px;
+   
 
+}
+
+#container {
+    margin: 0 auto;
+    width: 1080px;
 }
 
 @font-face {
     font-family: Montsserat;
     src: url(/style/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Montsserat-semibold;
+    src: url(/style/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
@@ -24,21 +31,16 @@ body {
 
 
 #cabecalho {
+    float: left;
     background: linear-gradient(to right, #000 25%, #012840 50%);
-    height: 120px;
+    height: 130px;
     width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
     box-shadow: 0 10px 100px;
     font-family: Montsserat;
-    margin: 0;
-    padding: 0;
-    
-    
+    margin: 0 auto;
 
     #logo {
-        position: absolute;
+        position: relative;
         top: -90px ;
         margin-left: 20px;
     }
@@ -46,10 +48,14 @@ body {
 
 }
 
-nav ul a {
+nav ul {
 
-    text-decoration: none;
-    color: #EDF8FF;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        color: #EDF8FF;
+    }
 
     li{
         display: inline;
@@ -58,7 +64,7 @@ nav ul a {
         margin-inline: 2%;
         float: left;
         left: 45%;
-        top: 25px;
+        top: -240px;
         background: #101D2B;
         border-radius: 8px;
     }
@@ -66,53 +72,50 @@ nav ul a {
     
     li:hover{
         box-shadow: 0 0 10px #000000;
+        transition: 0.2s;
     }
 }
 
 .imagem01 {
-    display: block;
-    position: relative;
-    height: 539px;
-    width: 391px;
-    top: 188px;
-    left: 103px;
-    padding: 30px;
+    height: 40%;
+    width: 25%;
+    margin-top: 100px;
+    margin-left: 100px;
     border-radius: 100px;
+    box-shadow: 0 0 10px black;
+    float: inline-start;
     clear: both;
+    
+    
     
 }
 
 
 #textoSobre {
-    display: block;
-    position: absolute;
-    padding: 1%;
-    left: 45%;
-    bottom: 20%;
-    width: 40em;
+    /* position: relative; */
+    padding-top: 12%;
+    width: 50em;
     text-align: center;
-    clear: both;
+    float: inline-end;
+    margin-right: 50px;
+    
+
 
     h1 {
-        font-size: 32px;
+        font-size: 2.5rem;
         font-family: glacial-bold;
         color: #0A2A4B;
     }
 
     p {
-        font-size: 22px;
+        font-size: 2rem;
         font-family: glacial-regular;
         color: #2C3F69;
+        text-shadow: 0 1px 100px #000;
     }
 
     button {
-        display: inline;
-        position: relative;
-        padding: 10px;
-        margin-inline: 23px;
-        float: left;
-        left: 40%;
-        top: 25px;
+        padding: 10px 20px;
         background: #101D2B;
         border-radius: 8px;
         border: none;
@@ -128,4 +131,173 @@ nav ul a {
             box-shadow: 0 0 100px #000000;
         }
     }
+}
+
+
+#servicos {
+    
+    clear: both;
+    padding-top: 5%;
+
+
+    hr {
+        width: 60%;
+        border: 2px solid;
+        color: #012840;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: Montsserat-semibold;
+        color: #0A2A4B;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: glacial-regular;
+        margin-top: -30px;
+        color: #2C3F69;
+
+    }
+    
+        .imageItem {
+            width: 300px;
+            height: 300px;
+            padding: 40px;
+            float: left;
+
+        }
+    
+        img {
+            border-radius: 20px;
+            box-shadow: 0 0 10px #000;
+        }
+
+        .boxImage {
+            width: 80%;
+            margin-left: 165px;
+        }
+
+    .text1 {
+        text-align: center;
+        font-family: glacial-regular;
+        top: 0px;
+        color: #2C3F69;
+    }
+    
+    .text2 {
+        text-align: center;
+        font-family: glacial-regular;
+        top: 0px;
+        color: #2C3F69;
+    }
+
+    .text3 {
+        text-align: center;
+        font-family: glacial-regular;
+        top: 0px;
+        color: #2C3F69;
+    }
+}
+
+#contato {
+    clear: both;
+    margin-top: 30em;
+    clear: both;
+
+    hr {
+        width: 60%;
+        border: 2px solid;
+        color: #012840;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: Montsserat-semibold;
+        color: #0A2A4B;
+    }
+
+    .formulario {
+        background-color: #012840;
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        height: 500px;
+        
+        
+        form {
+            margin: 0 auto;
+            width: 50%;
+            padding: 40px;
+            padding-top: 10%;
+        }
+
+        div {
+            position: relative;
+            margin-inline: 10%;
+            padding-top: 20px;
+        }
+
+        input{
+            height: 30px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        label {
+            color: white;
+            font-family: glacial-bold;
+            padding-top: 8px;
+        }
+
+        button {
+            display: inline;
+            padding: 10px 20px;
+            margin-inline: 40%;
+            top: 25px;
+            background: #101D2B;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-family: glacial-bold;
+      
+        }
+
+        .enviar {
+            left: 10px;
+        }
+    }
+            
+}
+
+
+footer {
+    text-align: center;
+    font-family: glacial-regular;
+}
+
+dialog {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+
+    h1 {
+        color: red;
+    }
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .ok {
+        background-color: red;
+        color: #fff;
+        border-radius: 8px;
+        border: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
 }
