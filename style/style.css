@@ -1,7 +1,9 @@
 body {
     background: #EDF8FF;
-   
+}
 
+html {
+    scroll-behavior: smooth;
 }
 
 #container {
