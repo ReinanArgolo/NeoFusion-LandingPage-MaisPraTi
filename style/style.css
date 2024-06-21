@@ -1,7 +1,9 @@
 body {
     background: #EDF8FF;
-   
+}
 
+html {
+    scroll-behavior: smooth;
 }
 
 #container {
@@ -300,4 +302,187 @@ dialog {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+}
+
+/* DISPOSITIVOS MÓVEIS */
+
+@media (max-width: 600px) {
+    
+    #container {
+        margin: 0 auto;
+        width: 600px;
+    }
+    
+    #cabecalho {
+        height: 130px;
+        width: 100vw;
+        float: none;
+    
+        #logo {
+            position: relative;
+            top: -90px ;
+            margin-left: 75px;
+        }
+
+        div {
+            height: 130px;
+        }
+    
+    
+    }
+    
+    nav ul {
+    
+        li{ 
+            text-align: center;
+            clear: both;
+            padding: 10px;
+            border-radius: 0px;
+            margin-left: 0;
+            width: 400px;
+            position: relative;
+            left: -48px;
+            top: 30%;
+
+        }
+       
+        
+        li:hover{
+            box-shadow: 0 0 10px #000000;
+            transition: 0.2s;
+        }
+    }
+    
+    .imagem01 {
+        height: 60%;
+        width: 70%;
+        margin-top: 100px;
+        margin-left: 60px;
+        border-radius: 50px;
+        
+    }
+    
+    
+    #textoSobre {
+
+        padding-top: 12%;
+        width: 20em;
+        
+        h1 {
+            font-size: 2rem;
+            font-family: glacial-bold;
+            color: #0A2A4B;
+        }
+    
+        p {
+            font-size: 1.2rem;
+        }
+    
+    }
+    
+    
+    #servicos .boxImage {
+        width: 80%;
+        margin-left: 15px;
+    }
+    
+    #contato {
+        clear: both;
+        margin-top: 30em;
+        hr {
+            width: 60%;
+            border: 2px solid;
+            color: #012840;
+        }
+    
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-family: Montsserat-semibold;
+            color: #0A2A4B;
+        }
+    
+        .formulario {
+            background-color: #012840;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            height: 500px;
+            
+            
+            form {
+                margin: 0 auto;
+                width: 50%;
+                padding: 40px;
+                padding-top: 10%;
+            }
+    
+            div {
+                position: relative;
+                margin-inline: 10%;
+                padding-top: 20px;
+            }
+    
+            input{
+                height: 30px;
+                width: 100%;
+                border-radius: 5px;
+            }
+    
+            label {
+                color: white;
+                font-family: glacial-bold;
+                padding-top: 8px;
+            }
+    
+            button {
+                display: inline;
+                padding: 10px 20px;
+                margin-inline: 40%;
+                top: 25px;
+                background: #101D2B;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                font-family: glacial-bold;
+          
+            }
+    
+            .enviar {
+                left: 10px;
+            }
+        }
+                
+    }
+    
+    
+    footer {
+        text-align: center;
+        font-family: glacial-regular;
+        display: inline;
+    }
+    
+    dialog {
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+    
+        h1 {
+            color: red;
+        }
+    
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    
+        .ok {
+            background-color: red;
+            color: #fff;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    
+    }
 }
