@@ -1,5 +1,6 @@
 body {
     background: #EDF8FF;
+    box-sizing: border-box;
 }
 
 html {
@@ -33,26 +34,21 @@ html {
 
 
 #cabecalho {
-    float: left;
-    background: linear-gradient(to right, #000 25%, #012840 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     height: 130px;
-    width: 100%;
     box-shadow: 0 10px 100px;
+    background: linear-gradient(to right, #000 25%, #012840 50%);
     font-family: Montsserat;
     margin: 0 auto;
-
-    #logo {
-        position: relative;
-        top: -90px ;
-        margin-left: 20px;
-    }
-
 
 }
 
 nav ul {
 
-    margin: 0;
+    display: flex;
+    gap: 3em;
 
     a {
         text-decoration: none;
@@ -60,15 +56,10 @@ nav ul {
     }
 
     li{
-        display: inline;
-        position: relative;
-        padding: 10px;
-        margin-inline: 2%;
-        float: left;
-        left: 45%;
-        top: -240px;
+        list-style: none;
         background: #101D2B;
         border-radius: 8px;
+        padding: 10px;
     }
    
     
@@ -78,15 +69,21 @@ nav ul {
     }
 }
 
+#sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30em;
+    margin: 30px;
+   
+}
+
 .imagem01 {
-    height: 40%;
-    width: 25%;
-    margin-top: 100px;
-    margin-left: 100px;
-    border-radius: 100px;
+    
+    height: 30em;
+    width: 20em;
     box-shadow: 0 0 10px black;
-    float: inline-start;
-    clear: both;
+    border-radius: 60px;
     
     
     
@@ -94,14 +91,9 @@ nav ul {
 
 
 #textoSobre {
-    /* position: relative; */
-    padding-top: 12%;
     width: 50em;
     text-align: center;
-    float: inline-end;
-    margin-right: 50px;
     
-
 
     h1 {
         font-size: 2.5rem;
@@ -137,10 +129,11 @@ nav ul {
 
 
 #servicos {
-    
-    clear: both;
-    padding-top: 5%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
 
     hr {
         width: 60%;
@@ -166,9 +159,11 @@ nav ul {
         .imageItem {
             width: 300px;
             height: 300px;
-            padding: 40px;
-            float: left;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
         }
     
         img {
@@ -176,37 +171,34 @@ nav ul {
             box-shadow: 0 0 10px #000;
         }
 
-        .boxImage {
-            width: 80%;
-            margin-left: 165px;
+        .box-externa-image {
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+            gap: 20px;
         }
 
-    .text1 {
+        .boxImage {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+    .text {
         text-align: center;
         font-family: glacial-regular;
-        top: 0px;
         color: #2C3F69;
     }
     
-    .text2 {
-        text-align: center;
-        font-family: glacial-regular;
-        top: 0px;
-        color: #2C3F69;
-    }
-
-    .text3 {
-        text-align: center;
-        font-family: glacial-regular;
-        top: 0px;
-        color: #2C3F69;
-    }
 }
 
 #contato {
-    clear: both;
-    margin-top: 30em;
-    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 20px;
 
     hr {
         width: 60%;
@@ -221,26 +213,29 @@ nav ul {
         color: #0A2A4B;
     }
 
+
+
     .formulario {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #012840;
         width: 80%;
-        margin: auto;
         border-radius: 10px;
         height: 500px;
+        gap: 50rem;
         
         
         form {
             margin: 0 auto;
             width: 50%;
             padding: 40px;
-            padding-top: 10%;
+            display: flex;
+            gap: 30px;
+            flex-direction: column; ;
         }
 
-        div {
-            position: relative;
-            margin-inline: 10%;
-            padding-top: 20px;
-        }
+    
 
         input{
             height: 30px;
@@ -255,12 +250,9 @@ nav ul {
         }
 
         button {
-            display: inline;
-            padding: 10px 20px;
-            margin-inline: 40%;
-            top: 25px;
             background: #101D2B;
             border-radius: 8px;
+            padding: 10px;
             border: none;
             color: white;
             font-family: glacial-bold;
