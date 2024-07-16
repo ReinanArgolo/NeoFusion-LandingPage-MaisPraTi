@@ -1,6 +1,13 @@
 body {
     background: #EDF8FF;
     box-sizing: border-box;
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: Montsserat;
+        color: #0A2A4B;
+    }
 }
 
 html {
@@ -129,10 +136,58 @@ nav ul {
 
 
 #servicos {
-
     display: flex;
+    align-items: center;
+    justify-content: start;
     flex-direction: column;
-    gap: 2rem;
+    margin-top: 20px;
+
+    h1 {
+
+    }
+
+    .content-servicos {
+        width: 90%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 6fr;
+    
+
+    }
+
+    
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin: 0;
+        height: 200px;
+        width: 182px;
+        padding: 0;
+        align-items: end;
+        justify-content: center;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        background: #101D2B;
+        border-radius: 8px 0 0 8px;
+        border: none;
+        font-family: glacial-regular;
+        color: #EDF8FF;
+        transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px #000000;
+        transition: 0.2s;
+    }
+
+    .botao.active {
+        background-color: #0A2A4B; 
+        color: white;  
+    }
     
 
     hr {
@@ -141,53 +196,35 @@ nav ul {
         color: #012840;
     }
 
-    h1 {
-        text-align: center;
+    h2 {
         font-size: 40px;
         font-family: Montsserat-semibold;
-        color: #0A2A4B;
+        color: #EDF8FF;
     }
 
-    h2 {
-        text-align: center;
-        font-family: glacial-regular;
-        margin-top: -30px;
-        color: #2C3F69;
-
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
     }
     
-        .imageItem {
-            width: 300px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            
-        }
-    
-        img {
-            border-radius: 20px;
-            box-shadow: 0 0 10px #000;
-        }
-
-        .box-externa-image {
-            display: flex;
-            align-items: center;
-            justify-content:center ;
-            gap: 20px;
-        }
-
-        .boxImage {
-            display: flex;
-            align-items: center;
-            gap: 70px;
-        }
-
-    .text {
-        text-align: center;
+    p {
+        font-size: 20px;
         font-family: glacial-regular;
-        color: #2C3F69;
+        color: #EDF8FF;
+    }
+
+
+    .container-abas {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: 85%;
+        justify-content: center;
+        padding: 40px;
+        background-color: #012840;
+        border-radius: 10px;
+        box-shadow: 0 0 8px #000; 
     }
     
 }
@@ -201,7 +238,7 @@ nav ul {
     margin-top: 20px;
 
     hr {
-        width: 60%;
+        width: 50rem;
         border: 2px solid;
         color: #012840;
     }
@@ -241,6 +278,7 @@ nav ul {
             height: 30px;
             width: 100%;
             border-radius: 5px;
+            border: none;
         }
 
         label {
@@ -298,43 +336,41 @@ dialog {
 
 /* DISPOSITIVOS MÓVEIS */
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 480px) {
     
-    #container {
-        margin: 0 auto;
-        width: 600px;
-    }
     
     #cabecalho {
-        height: 130px;
-        width: 100vw;
-        float: none;
-    
-        #logo {
-            position: relative;
-            top: -90px ;
-            margin-left: 75px;
-        }
 
-        div {
-            height: 130px;
-        }
-    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 50vh;
+        
     
     }
+
+    .logo-container {
+        height: 60px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
+    }
+
     
     nav ul {
+       
+        margin: 0a auto;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        width: 100rem;
     
         li{ 
-            text-align: center;
-            clear: both;
-            padding: 10px;
-            border-radius: 0px;
-            margin-left: 0;
-            width: 400px;
-            position: relative;
-            left: -48px;
-            top: 30%;
+           
+            
 
         }
        
@@ -373,9 +409,21 @@ dialog {
     }
     
     
-    #servicos .boxImage {
-        width: 80%;
-        margin-left: 15px;
+    #servicos {
+
+        .buttons-container {
+            flex-direction: initial;
+        }
+       
+        .content-servicos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+           
+        }
+
     }
     
     #contato {
@@ -472,4 +520,12 @@ dialog {
         }
     
     }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
 }

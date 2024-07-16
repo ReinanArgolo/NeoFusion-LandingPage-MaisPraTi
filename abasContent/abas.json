@@ -1,0 +1,19 @@
+{
+    "aba": [
+        {
+            "title": "Inteligência Artificial Personalizável",
+            "content": "A Inteligência Artificial Personalizável permite que empresas e indivíduos adaptem soluções de IA às suas necessidades específicas. Com essa tecnologia, é possível criar sistemas que aprendem e evoluem conforme os dados e as interações, proporcionando uma experiência única e eficiente. Seja para automação de processos, análise preditiva ou atendimento ao cliente, a IA personalizável oferece flexibilidade e precisão.",
+            "imgUrl": "/Img/img02.jpg"
+        },
+        {
+            "title": "Big Data & Análise de Dados",
+            "content": "A era do Big Data & Análise de Dados transforma grandes volumes de informações em insights valiosos. Utilizando técnicas avançadas de análise, é possível identificar padrões, prever tendências e tomar decisões informadas. Essa tecnologia é essencial para empresas que desejam otimizar operações, entender melhor seus clientes e se manter competitivas no mercado.",
+            "imgUrl": "/Img/img03.jpg"
+        },
+        {
+            "title": "Consultoria Para Sua Empresa",
+            "content": "A Consultoria Para Sua Empresa oferece expertise especializada para ajudar negócios a alcançar seus objetivos. Com uma abordagem personalizada, os consultores analisam o cenário atual da empresa, identificam oportunidades de melhoria e desenvolvem estratégias eficazes. Seja para inovação, crescimento ou resolução de problemas, a consultoria proporciona suporte estratégico e operacional.",
+            "imgUrl": "/Img/img04.jpg"
+        }
+    ]
+}
