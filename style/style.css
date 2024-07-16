@@ -40,10 +40,9 @@ html {
 
 
 
-#cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.navbar {
+    
+   
     height: 130px;
     box-shadow: 0 10px 100px;
     background: linear-gradient(to right, #000 25%, #012840 50%);
@@ -52,10 +51,9 @@ html {
 
 }
 
-nav ul {
-
-    display: flex;
+.navbar-nav {
     gap: 3em;
+    justify-content: space-between !important;
 
     a {
         text-decoration: none;
@@ -71,30 +69,34 @@ nav ul {
    
     
     li:hover{
+        background-color: #EDF8FF;
         box-shadow: 0 0 10px #000000;
         transition: 0.2s;
     }
 }
 
+
+
 #sobre {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 30em;
-    margin: 30px;
+
+
+    img{
+        margin-top: 10px;
+        height: 30em;
+        width: 20em;
+        box-shadow: 0 0 10px black;
+        border-radius: 60px;
+        
+        
+        
+    }
    
 }
 
-.imagem01 {
-    
-    height: 30em;
-    width: 20em;
-    box-shadow: 0 0 10px black;
-    border-radius: 60px;
-    
-    
-    
-}
+
 
 
 #textoSobre {
@@ -337,26 +339,45 @@ dialog {
 /* DISPOSITIVOS MÓVEIS */
 
 @media only screen and (max-width: 480px) {
-    
-    
-    #cabecalho {
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        height: 50vh;
-        
-    
+    .navbar-toggler {
+        border: none !important; 
+    }
+ 
+    .collapsed {
+        border: none !important;
     }
 
-    .logo-container {
+    .navbar-toggler:focus {
+        border: none !important;
+
+    }
+
+
+    .navbar-nav {
+        gap: 0.5em;
+    }
+
+    .ms-auto {
+        align-items: start;
+        margin: 0;
+        width: 370px;
+        margin-top: 10px;
+    }
+
+    .navbar-brand {
         height: 60px;
         overflow: hidden;
         display: flex;
         align-items: center;
     
     }
+
+    .nav-item {
+        width: 90vw;
+        gap: 0;
+    }
+    
 
     
     nav ul {
@@ -367,12 +388,6 @@ dialog {
         width: 100%;
         padding: 0;
         width: 100rem;
-    
-        li{ 
-           
-            
-
-        }
        
         
         li:hover{
@@ -381,19 +396,23 @@ dialog {
         }
     }
     
-    .imagem01 {
-        height: 60%;
-        width: 70%;
-        margin-top: 100px;
-        margin-left: 60px;
-        border-radius: 50px;
-        
+    #sobre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+
+            clear: both;
+            width: 20em;
+            height: 30em;
+        }
+
     }
     
-    
     #textoSobre {
-
-        padding-top: 12%;
+        
         width: 20em;
         
         h1 {
@@ -412,7 +431,7 @@ dialog {
     #servicos {
 
         .buttons-container {
-            flex-direction: initial;
+            flex-direction: row;
         }
        
         .content-servicos {
@@ -421,16 +440,43 @@ dialog {
             align-items: center;
             justify-content: center;
             width: 100%;
+            gap: 10px;
            
+        }
+
+        .container-abas {
+            flex-direction: column;
+        }
+
+        .buttons-container {
+            gap: 3px;
+            width: 90%;
+            height: 82px;
+        }
+    
+        button {
+            width: 100%;
+            padding: 5px 10px;
+            background: #101D2B;
+            border-radius: 8px;
+            border: none;
+            font-family: glacial-regular;
+            color: #EDF8FF;
+            transition: all 0.2s ease-in-out;
         }
 
     }
     
     #contato {
-        clear: both;
-        padding-top: 3em;
+
+        .titulo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
         hr {
-            width: 60%;
+            width: 100%;
             border: 2px solid;
             color: #012840;
         }
@@ -443,19 +489,22 @@ dialog {
         }
     
         .formulario{
+
+            
             height: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             
             form {
                 margin: 0 auto;
-                width: 50%;
-                padding: 40px;
+                width: 100%;
                 padding-top: 10%;
             }
     
             div {
                 position: relative;
                 margin-inline: 10%;
-                padding-top: 20px;
             }
     
             input{
@@ -467,7 +516,6 @@ dialog {
             label {
                 color: white;
                 font-family: glacial-bold;
-                padding-top: 8px;
             }
     
             button {
