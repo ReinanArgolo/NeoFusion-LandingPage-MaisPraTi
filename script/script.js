@@ -28,20 +28,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-function requisitar(id) {
+async function requisitar(id) {
     const title = document.getElementById('title');
     const content = document.getElementById('content');
     const image = document.getElementById('img');
     
-    // Remover classe 'active' de todos os botões
+    
     const buttons = document.querySelectorAll('.buttons-container .botao');
     buttons.forEach(button => button.classList.remove('active'));
-    
-    // Adicionar classe 'active' ao botão clicado
     const clickedButton = document.getElementById(`botao${id}`);
     clickedButton.classList.add('active');
 
-    fetch('/abasContent/abas.json')
+    await fetch('/abasContent/abas.json')
         .then(response => response.json())
         .then(data => {
             title.innerHTML = data.aba[id].title;
