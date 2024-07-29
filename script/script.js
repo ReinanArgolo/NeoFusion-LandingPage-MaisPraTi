@@ -29,26 +29,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function requisitar(id) {
+
+    
     const title = document.getElementById('title');
     const content = document.getElementById('content');
     const image = document.getElementById('img');
+    
+    title.classList.remove('fade-in');
+    content.classList.remove('fade-in');
+    image.classList.remove('fade-in');   	
 
-
+    title.classList.add('fade-out');
+    content.classList.add('fade-out');
+    image.classList.add('fade-out'); 
+    
     const buttons = document.querySelectorAll('.buttons-container .botao');
     buttons.forEach(button => button.classList.remove('active'));
     const clickedButton = document.getElementById(`botao${id}`);
     clickedButton.classList.add('active');
 
+        
+    setTimeout(() => {
+        title.classList.remove('fade-out');
+        content.classList.remove('fade-out');
+        image.classList.remove('fade-out'); 
+        
+        title.classList.add('fade-in');
+        content.classList.add('fade-in');
+        image.classList.add('fade-in');
+    }, 500);
+    
     await fetch('/DataContents/abas.json')
-        .then(response => response.json())
-        .then(data => {
-            title.innerHTML = data.aba[id].title;
-            content.innerHTML = data.aba[id].content;
-            image.src = data.aba[id].imgUrl;
-            console.log(data);
-        })
-        .catch(error => console.error('Error fetching the data:', error));
-}
+    .then(response => response.json())
+    .then(data => {
+        title.innerHTML = data.aba[id].title;
+        content.innerHTML = data.aba[id].content;
+        image.src = data.aba[id].imgUrl;
+        console.log(data);
+    })
+    .catch(error => console.error('Error fetching the data:', error));
+
+    }
 
 requisitar(0)
 
@@ -102,7 +123,7 @@ function populateCarousel(cards) {
     carouselInner.innerHTML = '';
 
     cards.forEach((card, index) => {
-        const isActive = index === 0 ? 'active' : ''; 
+        const isActive = index === 0 ? 'active' : '';
 
         const carouselItem = `
             <div class="carousel-item ${isActive}">
@@ -180,7 +201,7 @@ function saveCardContent(title, imgSrc, text) {
 
     localStorage.setItem(id, JSON.stringify(cardContent));
 
-    alert('Card salvo com sucesso!');
+    alert('Você se inscreveu com sucesso!');
 }
 
 function showSavedEvents() {
@@ -224,9 +245,9 @@ function editSavedEvent(key) {
     const editEventModal = new bootstrap.Modal(document.getElementById('editEventModal'));
     editEventModal.show();
 
-    document.getElementById('editEventForm').onsubmit = function(event) {
+    document.getElementById('editEventForm').onsubmit = function (event) {
         event.preventDefault();
-        
+
         cardContent.userName = document.getElementById('editUserName').value;
         cardContent.userEmail = document.getElementById('editUserEmail').value;
 
