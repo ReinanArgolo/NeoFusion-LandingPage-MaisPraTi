@@ -1,0 +1,24 @@
+{
+    "card": [
+        {
+            "title": "Revolução Big Data: Transformando Informações em Poder",
+            "content": "Participe deste evento que explora os desafios éticos dos algoritmos na era digital. Especialistas discutirão o impacto das plataformas tecnológicas, privacidade e responsabilidade das empresas. Descubra como os algoritmos moldam nossa percepção do mundo.",
+            "imgUrl": "/DataContents/Img/image_card_01.jpeg"
+        },
+        {
+            "title": "Revolução Big Data: Transformando Informações em Poder",
+            "content": "Explore como o Big Data está revolucionando negócios e sociedade. Aprenda com especialistas sobre análise de dados, tendências emergentes e como transformar informações em decisões estratégicas.",
+            "imgUrl": "/DataContents/Img/image_card_02.jpg"
+        },
+        {
+            "title": "Consultoria 360°: Estratégias para o Futuro",
+            "content": "Descubra as melhores práticas de consultoria para impulsionar negócios. Participe de workshops e palestras sobre inovação, liderança e estratégia com consultores de renome.",
+            "imgUrl": "/DataContents/Img/image_card_03.jpeg"
+        },
+        {
+            "title": "TESTE",
+            "content": "Descubra as melhores práticas de consultoria para impulsionar negócios. Participe de workshops e palestras sobre inovação, liderança e estratégia com consultores de renome.",
+            "imgUrl": "/DataContents/Img/image_card_03.jpeg"
+        }
+    ]
+}
