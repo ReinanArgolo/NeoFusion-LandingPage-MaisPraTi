@@ -3,6 +3,8 @@ Esta landing page foi denvolvida como atividade proposta do curso "Desenvolvedor
 
 A ideia da empresa NeoFusion baseia-se em um StartUp que oferece serviços a outras empresas.
 
+### LINK DA VERSÃO ATUALIZADA: https://neo-fusion-landing-page-mais-pra-onfjh8ryw.vercel.app/
+
 ## A landing page será desenvolvida utilizando:
 - HTML, CSS e JavaScript: para estrutura, design e interatividade.
 - Imagens e vídeos: para tornar a landing page visualmente atraente.
